@@ -1,5 +1,6 @@
 // recuperando o modulo express
 const express = require('express');
+const porta = process.env.PORT || 80;
 
 // criando instancia do express
 const app =  express();
@@ -15,7 +16,7 @@ app.get('/', function(requisicao, resposta){
 })
 
 // ouvindo a porta 
-app.listen(3000, function(){
+app.listen(porta, function(){
     // isto é uma função de callback
     console.log('Servidor web rodando com Express');
 })
